@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso</title>
+
+<style>
+
+body{
+background:#121212;
+color:white;
+font-family:sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+button{
+background:linear-gradient(90deg,#bb86fc,#9854f6);
+color:white;
+border:none;
+padding:1rem 2rem;
+font-size:1.2rem;
+border-radius:8px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<button onclick="ir()">Ir al contenido</button>
+
+<script>
+
+const silabas=[
+"ba","be","bi","bo","bu",
+"ca","ce","ci","co","cu",
+"da","de","di","do","du",
+"fa","fe","fi","fo","fu",
+"ga","ge","gi","go","gu",
+"la","le","li","lo","lu",
+"ma","me","mi","mo","mu",
+"na","ne","ni","no","nu",
+"ra","re","ri","ro","ru",
+"sa","se","si","so","su",
+"ta","te","ti","to","tu",
+"va","ve","vi","vo","vu"
+];
+
+function generarNombre(){
+
+let palabra="";
+
+for(let i=0;i<4;i++){
+
+palabra+=silabas[Math.floor(Math.random()*silabas.length)];
+
+}
+
+return palabra;
+
+}
+
+function ir(){
+
+const slug=generarNombre();
+
+window.location.href="https://videosmp4.pages.dev/"+slug;
+
+}
+
+</script>
+
+</body>
+</html>
